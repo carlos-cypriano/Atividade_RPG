@@ -1,4 +1,4 @@
-public class Humano implements Acao{
+public class Humano {
     
     int energia;
     String nome;
