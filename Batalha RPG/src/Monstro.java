@@ -1,8 +1,9 @@
 public class Monstro {
     
-    int hp;
+    int energia;
     String nome;
     int atk;
+    int defesa;
 
     public Monstro(){
 
