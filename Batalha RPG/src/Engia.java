@@ -1,37 +1,31 @@
 public class Engia extends Monstro{
     
-    private int atk = 15;
-    private int defesa = 5;
-    private int energia = 100;
-    private String nome = "Engia";
 
-
-    //Criei esse Construtor pra validar os atributos acima
-    public Engia( int atk, int defesa, int energia, String nome){
-        this.atk = atk;
-        this.defesa = defesa;
-        this.energia = energia; 
-        this.nome = nome;
+    public Engia( ){
+    int atk = 15;
+    int defesa = 5;
+    int energia = 100;
+    String nome = "Engia";
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro
     @Override
     public void atacar (Humano h){
-        this.energia = this.energia - this.atk;
+        energia = energia - atk;
     }
 
     @Override
     public void atacar (Monstro m){
-        this.energia = this.energia - this.atk;
+        energia = energia - atk;
     }
 
     @Override
     public void defender (Humano h){
-        this.energia = this.energia - this.atk + this.defesa;
+        energia = energia - atk + defesa;
     }
 
     @Override
     public void defender (Monstro m){
-        this.energia = this.energia - this.atk + this.defesa;
+        energia = energia - atk + defesa;
     }
 }

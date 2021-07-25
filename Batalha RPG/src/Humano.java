@@ -3,6 +3,7 @@ public class Humano {
     int energia;
     String nome;
     int atk;
+    int defesa;
     int xp;
 
     public Humano(){
