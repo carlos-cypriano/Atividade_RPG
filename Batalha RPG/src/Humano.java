@@ -11,19 +11,19 @@ public class Humano {
     }
 
     public void atacar(Humano h){
-
-    }
-
-    public void atacar(Monstro m){
-
-    }
-
-    public void defender(Humano h){
-
-    }
-
-    public void defender(Monstro m){
-
-    }
+        h.energia = h.energia - h.atk;
+        }
+    
+        public void atacar(Monstro m){
+        m.energia = m.energia - m.atk;
+        }
+    
+        public void defender(Humano h){
+        h.energia = h.energia - h.atk + h.defesa;
+        }
+    
+        public void defender(Monstro m){
+        m.energia = m.energia - m.atk + m.defesa;
+        }
 
 }

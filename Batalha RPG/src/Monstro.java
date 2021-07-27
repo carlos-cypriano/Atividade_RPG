@@ -18,7 +18,7 @@ public class Monstro {
     }
 
     public void defender(Humano h){
-    //h.energia = h.energia - h.atk + h.defesa;
+    h.energia = h.energia - h.atk + h.defesa;
     }
 
     public void defender(Monstro m){

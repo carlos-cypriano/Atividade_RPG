@@ -11,21 +11,21 @@ public class Mago extends Humano {
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro
     @Override
     public void atacar (Humano h){
-        energia = energia - atk;
+        h.energia = h.energia - h.atk;
     }
 
     @Override
     public void atacar (Monstro m){
-        energia = energia - atk;
+        m.energia = m.energia - m.atk;
     }
 
     @Override
     public void defender (Humano h){
-        energia = energia - atk + defesa;
+        h.energia = h.energia - h.atk + h.defesa;
     }
 
     @Override
     public void defender (Monstro m){
-        energia = energia - atk + defesa;
+        m.energia = m.energia - m.atk + m.defesa;
     }
 }
