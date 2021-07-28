@@ -77,11 +77,7 @@ public class Batalha {
 
 
             if(action && reaction){
-                System.out.println("os ataques de " +  competidores.get(0).nome + " e " + 
-                competidores.get(1).nome + " se chocaram, resultando em redução de dano");
                 
-                competidores.get(0).atk = 3;
-                competidores.get(1).atk = 3;
             }
             
             if(action && !reaction){

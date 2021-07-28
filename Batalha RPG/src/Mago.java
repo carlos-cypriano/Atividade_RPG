@@ -11,7 +11,7 @@ public class Mago extends Competidores {
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro
     @Override
     public void atacar (Competidores c){
-        this.energia = this.energia - c.atk;
+        c.energia = c.energia - this.atk;
     }
 
     @Override
