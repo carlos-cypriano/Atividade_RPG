@@ -85,7 +85,9 @@ public class Batalha {
             }
             
             if(action && !reaction){
+                monstro.get(second_Player).defender(humano.get(first_Player));
                 humano.get(first_Player).atacar(monstro.get(second_Player));
+                System.out.println(monstro.get(second_Player).nome + " defendeu ");
                 System.out.println(humano.get(first_Player).nome + " atacou " + monstro.get(second_Player).nome + 
                 " causou " + humano.get(first_Player).atk + " de dano");
                  
@@ -94,7 +96,9 @@ public class Batalha {
             }
             
             else if(!action && reaction){
+                humano.get(first_Player).defender(monstro.get(second_Player));
                 monstro.get(second_Player).atacar(humano.get(first_Player));
+                System.out.println(monstro.get(first_Player).nome + " defendeu ");
                 System.out.println(monstro.get(second_Player).nome + " atacou " + humano.get(first_Player).nome + 
                                    " causou " + monstro.get(second_Player).atk + " de dano");
                  //humano.get(first_Player).atk += 2;
@@ -102,7 +106,7 @@ public class Batalha {
             
             if(!action && !reaction){
                 System.out.println(humano.get(first_Player).nome + " e " + monstro.get(second_Player).nome + 
-                                   " não agiram " + " ninguém se feriu");
+                                   " se defenderam " + " ninguém se feriu");
                 
             }
         }
