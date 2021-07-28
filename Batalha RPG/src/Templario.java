@@ -1,4 +1,4 @@
-public class Templario extends Humano {
+public class Templario extends Competidores {
 
     public Templario(){
     atk = 23;
@@ -9,22 +9,22 @@ public class Templario extends Humano {
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro
     @Override
-    public void atacar (Humano h){
-        h.energia = h.energia - this.atk;
+    public void atacar (Competidores c){
+        c.energia = c.energia - this.atk;
     }
 
-    @Override
+   /* @Override
     public void atacar (Monstro m){
         m.energia = m.energia - this.atk;
-    }
+    }*/
 
     @Override
-    public void defender (Humano h){
-        h.energia = h.energia - this.atk + this.defesa;
+    public void defender (Competidores c){
+        c.energia = c.energia - this.atk + this.defesa;
     }
 
-    @Override
+   /* @Override
     public void defender (Monstro m){
         m.energia = m.energia - this.atk + this.defesa;
-    }
+    }*/
 }

@@ -8,16 +8,17 @@ public class Batalha {
     /*Monstro [] m = new Monstro [2];
     Humano [] h = new Humano [4];*/
 
-    List<Monstro> monstro = new ArrayList<Monstro>();       /*
-                                                                Subtituindo Array pot ArrayList
-                                                            */
-    List<Humano> humano = new ArrayList<Humano>();
+   // List<Monstro> monstro = new ArrayList<Monstro>();       
+                                                                //Subtituindo Array pot ArrayList
+                                                            
+    List<Competidores> competidores = new ArrayList<Competidores>();
 
 
     Random r = new Random();
     boolean action, reaction;
 
-    int first_Player, second_Player;
+    //int first_Player, second_Player;
+    //int p1, p2, p3, p4, p5, p6;
 
 
     public Batalha(){
@@ -32,16 +33,19 @@ public class Batalha {
             m [0] = new Engia();
             m [1] = new Cerbero();*/
 
-            humano.add(new Mago ());
-            humano.add(new Ladino());
-            humano.add(new Templario());
-            humano.add(new Guerreiro());
-            monstro.add(new Engia());
-            monstro.add(new Cerbero());
+            competidores.add(new Mago ());  //0
+            competidores.add(new Ladino()); //1
+            competidores.add(new Templario());  //2
+            competidores.add(new Guerreiro());  //3
+            competidores.add(new Engia());  //4
+            competidores.add(new Cerbero()); //5
 
 
-            first_Player = r.nextInt(4);
-            second_Player = r.nextInt(2);
+            /*first_Player = r.nextInt(6);
+            second_Player = r.nextInt(6);*/
+
+            
+            
             
             start();
     }
@@ -54,61 +58,110 @@ public class Batalha {
         /*Nesse if caso a vida do primeiro jogador do tipo humano seja menor ou igual a zero,
          e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
          em tese ta funcionando*/
-        if(humano.get(first_Player).energia <= 0){
-            System.out.println(monstro.get(second_Player).nome + " venceu " + "energia: " + monstro.get(second_Player).energia);
-            if(humano.get(first_Player).nome.equals("Mago") || humano.get(first_Player).nome.equals("Ladino") || humano.get(first_Player).nome.equals("Guerreiro") || humano.get(first_Player).nome.equals("Templario")){
-                humano.remove(humano.get(first_Player));
-            }
+        if(competidores.get(0).energia <= 0){
+            System.out.println(competidores.get(1).nome + " venceu " + "energia: " + competidores.get(1).energia);
+            
         }
 
         /*Nesse if caso a vida do segundo jogador do tipo monstro seja menor ou igual a zero,
          e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
          em tese ta funcionando*/
-        else if(monstro.get(second_Player).energia <= 0){
-            System.out.println(humano.get(first_Player).nome + " venceu " + "energia: " + humano.get(first_Player).energia + " XP: " + humano.get(first_Player).xp + 10 );
-            if(monstro.get(second_Player).nome.equals("Engia") || monstro.get(second_Player).nome.equals("Cerbero")){
-                monstro.remove(monstro.get(second_Player));
-            }
+        else if(competidores.get(1).energia <= 0){
+            System.out.println(competidores.get(0).nome + " venceu " + "energia: " + competidores.get(0).energia + " XP: " + competidores.get(0).xp + 10 );
+            
         }
 
-        while(humano.get(first_Player).energia > 0 && monstro.get(second_Player).energia > 0){
+        while(competidores.get(0).energia > 0 && competidores.get(1).energia > 0){
             action = r.nextBoolean();
             reaction = r.nextBoolean();
 
 
             if(action && reaction){
-                System.out.println("os ataques de " +  humano.get(first_Player).nome + " e " + 
-                monstro.get(second_Player).nome + " se chocaram, resultando em redução de dano");
+                System.out.println("os ataques de " +  competidores.get(0).nome + " e " + 
+                competidores.get(1).nome + " se chocaram, resultando em redução de dano");
                 
-                humano.get(first_Player).atk = 3;
-                monstro.get(second_Player).atk = 3;
+                competidores.get(0).atk = 3;
+                competidores.get(1).atk = 3;
             }
             
             if(action && !reaction){
-                monstro.get(second_Player).defender(humano.get(first_Player));
-                humano.get(first_Player).atacar(monstro.get(second_Player));
-                System.out.println(monstro.get(second_Player).nome + " defendeu ");
-                System.out.println(humano.get(first_Player).nome + " atacou " + monstro.get(second_Player).nome + 
-                " causou " + humano.get(first_Player).atk + " de dano");
+                competidores.get(1).defender(competidores.get(0));
+                competidores.get(0).atacar(competidores.get(1));
+                //System.out.println(monstro.get(second_Player).nome + " defendeu ");
+                System.out.println(competidores.get(0).nome + " atacou " + competidores.get(1).nome + 
+                " causou " + competidores.get(0).atk + " de dano");
                  
                 
                 //humano.get(first_Player).atk += 2;
             }
             
             else if(!action && reaction){
-                humano.get(first_Player).defender(monstro.get(second_Player));
-                monstro.get(second_Player).atacar(humano.get(first_Player));
-                System.out.println(humano.get(first_Player).nome + " defendeu ");
-                System.out.println(monstro.get(second_Player).nome + " atacou " + humano.get(first_Player).nome + 
-                                   " causou " + monstro.get(second_Player).atk + " de dano");
+                competidores.get(0).defender(competidores.get(1));
+                competidores.get(1).atacar(competidores.get(0));
+                //System.out.println(humano.get(first_Player).nome + " defendeu ");
+                System.out.println(competidores.get(1).nome + " atacou " + competidores.get(0).nome + 
+                                   " causou " + competidores.get(1).atk + " de dano");
                  //humano.get(first_Player).atk += 2;
             }
             
             if(!action && !reaction){
-                System.out.println(humano.get(first_Player).nome + " e " + monstro.get(second_Player).nome + 
+                System.out.println(competidores.get(0).nome + " e " + competidores.get(1).nome + 
                                    " se defenderam e " + " ninguém se feriu");
                 
             }
+
+            //segunda batalha
+            if(competidores.get(0).energia <= 0){
+                System.out.println(competidores.get(1).nome + " venceu " + "energia: " + competidores.get(1).energia);
+                
+            }
+    
+            /*Nesse if caso a vida do segundo jogador do tipo monstro seja menor ou igual a zero,
+             e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
+             em tese ta funcionando*/
+            else if(competidores.get(1).energia <= 0){
+                System.out.println(competidores.get(0).nome + " venceu " + "energia: " + competidores.get(0).energia + " XP: " + competidores.get(0).xp + 10 );
+                
+            }
+    
+            while(competidores.get(0).energia > 0 && competidores.get(1).energia > 0){
+                action = r.nextBoolean();
+                reaction = r.nextBoolean();
+    
+    
+                if(action && reaction){
+                    System.out.println("os ataques de " +  competidores.get(0).nome + " e " + 
+                    competidores.get(1).nome + " se chocaram, resultando em redução de dano");
+                    
+                    competidores.get(0).atk = 3;
+                    competidores.get(1).atk = 3;
+                }
+                
+                if(action && !reaction){
+                    competidores.get(1).defender(competidores.get(0));
+                    competidores.get(0).atacar(competidores.get(1));
+                    //System.out.println(monstro.get(second_Player).nome + " defendeu ");
+                    System.out.println(competidores.get(0).nome + " atacou " + competidores.get(1).nome + 
+                    " causou " + competidores.get(0).atk + " de dano");
+                     
+                    
+                    //humano.get(first_Player).atk += 2;
+                }
+                
+                else if(!action && reaction){
+                    competidores.get(0).defender(competidores.get(1));
+                    competidores.get(1).atacar(competidores.get(0));
+                    //System.out.println(humano.get(first_Player).nome + " defendeu ");
+                    System.out.println(competidores.get(1).nome + " atacou " + competidores.get(0).nome + 
+                                       " causou " + competidores.get(1).atk + " de dano");
+                     //humano.get(first_Player).atk += 2;
+                }
+                
+                if(!action && !reaction){
+                    System.out.println(competidores.get(0).nome + " e " + competidores.get(1).nome + 
+                                       " se defenderam e " + " ninguém se feriu");
+                    
+                }
         }
 
     }
