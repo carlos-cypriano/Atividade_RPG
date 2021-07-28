@@ -73,7 +73,7 @@ public class Batalha {
             
         }
 
-        while(competidores.get(0).energia > 0 && competidores.get(1).energia > 0){
+        while(competidores.get(0).energia > 0 || competidores.get(1).energia > 0){
             action = r.nextBoolean();
             reaction = r.nextBoolean();
             
