@@ -113,7 +113,7 @@ public class Batalha {
             
             if(!action && !reaction){
                 System.out.println(humano.get(first_Player).nome + " e " + monstro.get(second_Player).nome + 
-                                   " se defenderam " + " ninguém se feriu");
+                                   " se defenderam e " + " ninguém se feriu");
                 
             }
 
