@@ -59,6 +59,7 @@ public class Batalha {
          e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
          em tese ta funcionando*/
         if(competidores.get(0).energia <= 0){
+            competidores.remove(competidores.get(0));
             System.out.println(competidores.get(1).nome + " venceu " + "energia: " + competidores.get(1).energia);
             
         }
@@ -67,6 +68,7 @@ public class Batalha {
          e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
          em tese ta funcionando*/
         else if(competidores.get(1).energia <= 0){
+            competidores.remove(competidores.get(1));
             System.out.println(competidores.get(0).nome + " venceu " + "energia: " + competidores.get(0).energia + " XP: " + competidores.get(0).xp + 10 );
             
         }
