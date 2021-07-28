@@ -2,9 +2,9 @@ public class Mago extends Humano {
 
     
     public Mago(){
-        int atk = 15;
-        int defesa = 5;
-        int energia = 100;
+        int atk = 30;
+        int defesa = 4;
+        int energia = 80;
         String nome = "Mago";
     }
 

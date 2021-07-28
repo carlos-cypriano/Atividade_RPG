@@ -1,9 +1,9 @@
 public class Guerreiro extends Humano {
 
     public Guerreiro(){
-    int atk = 15;
-    int defesa = 5;
-    int energia = 100;
+    int atk = 25;
+    int defesa = 8;
+    int energia = 140;
     String nome = "Guerreiro";
     }
 

@@ -2,9 +2,9 @@ public class Engia extends Monstro{
     
 
     public Engia( ){
-    int atk = 15;
-    int defesa = 5;
-    int energia = 100;
+    int atk = 22;
+    int defesa = 4;
+    int energia = 110;
     String nome = "Engia";
     }
 
