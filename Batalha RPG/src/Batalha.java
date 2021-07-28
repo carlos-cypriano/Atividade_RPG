@@ -98,7 +98,7 @@ public class Batalha {
             else if(!action && reaction){
                 humano.get(first_Player).defender(monstro.get(second_Player));
                 monstro.get(second_Player).atacar(humano.get(first_Player));
-                System.out.println(monstro.get(first_Player).nome + " defendeu ");
+                System.out.println(humano.get(first_Player).nome + " defendeu ");
                 System.out.println(monstro.get(second_Player).nome + " atacou " + humano.get(first_Player).nome + 
                                    " causou " + monstro.get(second_Player).atk + " de dano");
                  //humano.get(first_Player).atk += 2;
