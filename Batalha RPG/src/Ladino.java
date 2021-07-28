@@ -1,10 +1,10 @@
 public class Ladino extends Humano {
 
     public Ladino(){
-    int atk = 21;
-    int defesa = 5;
-    int energia = 80;
-    String nome = "Ladino";
+    atk = 21;
+    defesa = 5;
+    energia = 80;
+    nome = "Ladino";
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro

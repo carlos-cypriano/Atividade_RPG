@@ -1,10 +1,10 @@
 public class Cerbero extends Monstro{
  
     public Cerbero(){
-    int atk = 26;
-    int defesa = 8;
-    int energia = 130;
-    String nome = "Cerbero";
+    atk = 26;
+     defesa = 8;
+    energia = 130;
+    nome = "Cerbero";
 
     }
 
