@@ -2,8 +2,8 @@ public class Templario extends Humano {
 
     public Templario(){
     int atk = 23;
-    int defesa = 10;
-    int energia = 120;
+    int defesa = 12;
+    int energia = 130;
     String nome = "Templario";
     }
 
