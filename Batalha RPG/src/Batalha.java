@@ -55,7 +55,7 @@ public class Batalha {
          e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
          em tese ta funcionando*/
         if(humano.get(first_Player).energia <= 0){
-            System.out.println(monstro.get(second_Player).nome + " venceu " + "=>> energia: " + monstro.get(second_Player).energia);
+            System.out.println(monstro.get(second_Player).nome + " venceu " + "energia: " + monstro.get(second_Player).energia);
             if(humano.get(first_Player).nome.equals("Mago") || humano.get(first_Player).nome.equals("Ladino") || humano.get(first_Player).nome.equals("Guerreiro") || humano.get(first_Player).nome.equals("Templario")){
                 humano.remove(humano.get(first_Player));
             }
@@ -65,7 +65,7 @@ public class Batalha {
          e o nome desse jogador for um dos tipos citados abaixo, eu excluo esse jogador da partida
          em tese ta funcionando*/
         else if(monstro.get(second_Player).energia <= 0){
-            System.out.println(humano.get(first_Player).nome + " venceu " + "=>> energia: " + humano.get(first_Player).energia + " =>> XP: " + humano.get(first_Player).xp + 10 );
+            System.out.println(humano.get(first_Player).nome + " venceu " + "energia: " + humano.get(first_Player).energia + " XP: " + humano.get(first_Player).xp + 10 );
             if(monstro.get(second_Player).nome.equals("Engia") || monstro.get(second_Player).nome.equals("Cerbero")){
                 monstro.remove(monstro.get(second_Player));
             }
@@ -74,7 +74,6 @@ public class Batalha {
         while(humano.get(first_Player).energia > 0 && monstro.get(second_Player).energia > 0){
             action = r.nextBoolean();
             reaction = r.nextBoolean();
-           
 
 
             if(action && reaction){
@@ -83,10 +82,7 @@ public class Batalha {
                 
                 humano.get(first_Player).atk = 3;
                 monstro.get(second_Player).atk = 3;
-
-                
             }
-
             
             if(action && !reaction){
                 monstro.get(second_Player).defender(humano.get(first_Player));
@@ -94,8 +90,6 @@ public class Batalha {
                 System.out.println(monstro.get(second_Player).nome + " defendeu ");
                 System.out.println(humano.get(first_Player).nome + " atacou " + monstro.get(second_Player).nome + 
                 " causou " + humano.get(first_Player).atk + " de dano");
-
-           
                  
                 
                 //humano.get(first_Player).atk += 2;
@@ -107,7 +101,6 @@ public class Batalha {
                 System.out.println(humano.get(first_Player).nome + " defendeu ");
                 System.out.println(monstro.get(second_Player).nome + " atacou " + humano.get(first_Player).nome + 
                                    " causou " + monstro.get(second_Player).atk + " de dano");
-                
                  //humano.get(first_Player).atk += 2;
             }
             
@@ -116,8 +109,6 @@ public class Batalha {
                                    " se defenderam e " + " ninguém se feriu");
                 
             }
-
-            
         }
 
     }
