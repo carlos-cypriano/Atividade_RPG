@@ -1,10 +1,11 @@
 public class Cerbero extends Monstro{
  
     public Cerbero(){
-    atk = 15;
-    defesa = 5;
-    energia = 100;
-    nome = "Cerbero";
+    int atk = 26;
+    int defesa = 8;
+    int energia = 130;
+    String nome = "Cerbero";
+
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro

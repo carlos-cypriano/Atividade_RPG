@@ -1,11 +1,11 @@
 public class Engia extends Monstro{
     
 
-    public Engia(){
-    atk = 15;
-    defesa = 5;
-    energia = 100;
-    nome = "Engia";
+    public Engia( ){
+    int atk = 22;
+    int defesa = 4;
+    int energia = 110;
+    String nome = "Engia";
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro

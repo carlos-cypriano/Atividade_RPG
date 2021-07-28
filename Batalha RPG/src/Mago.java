@@ -2,10 +2,10 @@ public class Mago extends Humano {
 
     
     public Mago(){
-        atk = 15;
-        defesa = 5;
-        energia = 100;
-        nome = "Mago";
+        int atk = 30;
+        int defesa = 4;
+        int energia = 80;
+        String nome = "Mago";
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro

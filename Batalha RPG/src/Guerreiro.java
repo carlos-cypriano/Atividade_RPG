@@ -1,10 +1,10 @@
 public class Guerreiro extends Humano {
 
     public Guerreiro(){
-    atk = 15;
-    defesa = 5;
-    energia = 100;
-    nome = "Guerreiro";
+    int atk = 25;
+    int defesa = 8;
+    int energia = 140;
+    String nome = "Guerreiro";
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro

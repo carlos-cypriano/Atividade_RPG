@@ -1,10 +1,10 @@
 public class Templario extends Humano {
 
     public Templario(){
-    atk = 15;
-    defesa = 5;
-    energia = 100;
-    nome = "Templario";
+    int atk = 23;
+    int defesa = 12;
+    int energia = 130;
+    String nome = "Templario";
     }
 
     //@Override serve pra apontar que esse método está repetindo o método Pai no caso o Monstro
