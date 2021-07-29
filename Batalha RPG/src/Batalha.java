@@ -73,28 +73,24 @@ public class Batalha {
             
         }
 
-        while(competidores.get(0).energia > 0 || competidores.get(1).energia > 0){
+        while(competidores.get(0).energia > 0 && competidores.get(1).energia > 0){
             action = r.nextBoolean();
             reaction = r.nextBoolean();
             
             if(action && !reaction){
                 competidores.get(1).defender(competidores.get(0));
                 competidores.get(0).atacar(competidores.get(1));
-                //System.out.println(monstro.get(second_Player).nome + " defendeu ");
+                System.out.println(competidores.get(1).nome + " defendeu contra o ataque ");
                 System.out.println(competidores.get(0).nome + " atacou " + competidores.get(1).nome + 
                 " causou " + competidores.get(0).atk + " de dano");
-                 
-                
-                //humano.get(first_Player).atk += 2;
             }
             
             else if(!action && reaction){
                 competidores.get(0).defender(competidores.get(1));
                 competidores.get(1).atacar(competidores.get(0));
-                //System.out.println(humano.get(first_Player).nome + " defendeu ");
+                System.out.println(competidores.get(0).nome + " defendeu contra o ataque ");
                 System.out.println(competidores.get(1).nome + " atacou " + competidores.get(0).nome + 
                                    " causou " + competidores.get(1).atk + " de dano");
-                 //humano.get(first_Player).atk += 2;
             }
             
             if(!action && !reaction){
