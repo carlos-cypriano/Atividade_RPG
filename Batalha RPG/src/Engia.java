@@ -2,7 +2,7 @@ public class Engia extends Competidores{
     
 
     public Engia( ){
-    atk = 22;
+    atk = 23;
     defesa = 4;
     energia = 110;
     nome = "Engia";

@@ -2,8 +2,8 @@ public class Ladino extends Competidores {
 
     public Ladino(){
     atk = 23;
-    defesa = 5;
-    energia = 90;
+    defesa = 4;
+    energia = 100;
     nome = "Ladino";
     }
 
