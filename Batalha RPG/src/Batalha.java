@@ -102,7 +102,7 @@ public class Batalha {
                                    " se defenderam e " + " ninguém se feriu");
                 
             }
-            break;
+            
         }
         
 
