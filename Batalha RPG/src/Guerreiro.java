@@ -3,7 +3,7 @@ public class Guerreiro extends Competidores {
     public Guerreiro(){
     atk = 25;
     defesa = 8;
-    energia = 140;
+    energia = 130;
     nome = "Guerreiro";
     }
 
