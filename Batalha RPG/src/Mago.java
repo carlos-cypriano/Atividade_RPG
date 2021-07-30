@@ -2,9 +2,9 @@ public class Mago extends Competidores {
 
     
     public Mago(){
-        atk = 30;
-        defesa = 4;
-        energia = 80;
+        atk = 27;
+        defesa = 3;
+        energia = 90;
         nome = "Mago";
     }
 

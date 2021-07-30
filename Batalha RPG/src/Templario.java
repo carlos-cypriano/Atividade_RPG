@@ -1,8 +1,8 @@
 public class Templario extends Competidores {
 
     public Templario(){
-    atk = 23;
-    defesa = 12;
+    atk = 24;
+    defesa = 10;
     energia = 130;
     nome = "Templario";
     }
