@@ -64,17 +64,21 @@ public class Batalha {
        
         /*feedback vitoria do mago*/
         if(competidores.get(0).energia <= 0){
-            System.out.println(competidores.get(1).nome + " venceu " + "energia: " + competidores.get(1).energia+ " XP: " + competidores.get(0).xp + 10);
+            competidores.get(1).xp = 10;
+            System.out.println(competidores.get(1).nome + " venceu " + "energia: " + competidores.get(1).energia+ " XP: " + competidores.get(1).xp);
             luta =2;
             System.out.println("SEGUNDA LUTA!!!");
+            //competidores.get(0).energia = 90;
     
         }
 
         /*feed back vitoria do ladino*/
         else if(competidores.get(1).energia <= 0){
-            System.out.println(competidores.get(0).nome + " venceu " + "energia: " + competidores.get(0).energia + " XP: " + competidores.get(0).xp + 10 );
+            competidores.get(0).xp = 10;
+            System.out.println(competidores.get(0).nome + " venceu " + "energia: " + competidores.get(0).energia + " XP: " + competidores.get(0).xp);
             luta =2;
             System.out.println("SEGUNDA LUTA!!!");
+            //competidores.get(1).energia = 100;
     
         }
 
@@ -151,17 +155,21 @@ public class Batalha {
 
         /*feedback vitoria engia*/
         if(competidores.get(3).energia <= 0){
-        System.out.println(competidores.get(2).nome + " venceu " + "energia: " + competidores.get(2).energia+ " XP: " + competidores.get(2).xp + 10);
+        competidores.get(2).xp = 10;
+        System.out.println(competidores.get(2).nome + " venceu " + "energia: " + competidores.get(2).energia+ " XP: " + competidores.get(2).xp);
         luta =3;
         System.out.println("LUTA FINAL!!!");
+        //competidores.get(3).energia = 110;
 
         }
 
         /*feedback vitoria guerreiro*/
         else if(competidores.get(2).energia <= 0){
-        System.out.println(competidores.get(3).nome + " venceu " + "energia: " + competidores.get(3).energia + " XP: " + competidores.get(3).xp + 10 );
+        competidores.get(3).xp = 10;
+        System.out.println(competidores.get(3).nome + " venceu " + "energia: " + competidores.get(3).energia + " XP: " + competidores.get(3).xp);
         luta =3;
         System.out.println("LUTA FINAL!!!");
+        //competidores.get(2).energia = 140;
 
         } 
 
@@ -170,16 +178,23 @@ public class Batalha {
         if (luta ==3){
             
 
-            if(competidores.get(0).energia >0)
+            if(competidores.get(0).energia >0){
+            competidores.get(0).energia = 90;
             f = competidores.get(0);
+            }
 
-            else if(competidores.get(1).energia >0)
+            else if(competidores.get(1).energia >0){
+            competidores.get(1).energia = 100;
             f = competidores.get(1);
+            }
 
-            if(competidores.get(2).energia >0)
-            f2 = competidores.get(3);
+            if(competidores.get(2).energia >0){
+                competidores.get(2).energia = 130;
+            f2 = competidores.get(2);
+            }
 
-            else if(competidores.get(3).energia >0)
+            else if(competidores.get(3).energia >0){
+            competidores.get(3).energia = 140;
             f2 = competidores.get(3);
         }
 
@@ -220,11 +235,14 @@ public class Batalha {
 
 
     if(f2.energia <= 0 && luta==3){
-        System.out.println(f.nome + " venceu o torneio!!!! " + "energia: " + f.energia+ " XP: " + f.xp + 30);
+        f.xp = 30;
+        System.out.println(f.nome + " venceu o torneio!!!! " + "energia: " + f.energia+ " XP: " + f.xp);
      }
     else if(f.energia <= 0 && luta ==3){
-        System.out.println(f2.nome + " venceu o torneio!!!! " + "energia: " + f2.energia+ " XP: " + f2.xp + 30);
+        f2.xp = 30;
+        System.out.println(f2.nome + " venceu o torneio!!!! " + "energia: " + f2.energia+ " XP: " + f2.xp);
      }
 
     }
+  }
 }
