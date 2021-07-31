@@ -35,8 +35,8 @@ public class Batalha {
             m [1] = new Cerbero();*/
 
             competidores.add(new Mago ());  //0
-            competidores.add(new Ladino()); //1
-            competidores.add(new Templario());  //2
+            competidores.add(new Engia()); //1
+            competidores.add(new Cerbero());  //2
             competidores.add(new Guerreiro());  //3
           //competidores.add(new Engia());  //4
           //competidores.add(new Cerbero()); //5
@@ -62,7 +62,7 @@ public class Batalha {
         //Função de inicio de batalha
         //Enquanto lutadores estiverem vivos, essas instruções serão executadas
        
-        /*feedback vitoria do mago*/
+        /*feedback vitoria do engia*/
         if(competidores.get(0).energia <= 0){
             competidores.get(1).xp = 10;
             System.out.println(competidores.get(1).nome + " venceu " + "energia: " + competidores.get(1).energia+ " XP: " + competidores.get(1).xp);
@@ -72,7 +72,7 @@ public class Batalha {
     
         }
 
-        /*feed back vitoria do ladino*/
+        /*feed back vitoria do mago*/
         else if(competidores.get(1).energia <= 0){
             competidores.get(0).xp = 10;
             System.out.println(competidores.get(0).nome + " venceu " + "energia: " + competidores.get(0).energia + " XP: " + competidores.get(0).xp);
@@ -153,7 +153,7 @@ public class Batalha {
 }
 
 
-        /*feedback vitoria engia*/
+        /*feedback vitoria cerbero*/
         if(competidores.get(3).energia <= 0){
         competidores.get(2).xp = 10;
         System.out.println(competidores.get(2).nome + " venceu " + "energia: " + competidores.get(2).energia+ " XP: " + competidores.get(2).xp);
